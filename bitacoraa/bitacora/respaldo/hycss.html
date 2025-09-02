@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Y CSS</title>
+  <style>
+    @property --marian {
+        syntax: "<color>";
+        inherits: true;
+        initial-value: #5e0000;
+    }
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-image: url(https://images.gamebanana.com/img/ss/mods/6209499caca05.jpg);
+      color: #eee;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+    }
+
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 999;              
+      text-align: center;         
+      border-bottom: 2px solid var(--maria);
+      padding: 3%;
+      background: rgba(0,0,0,0.3);  
+    }
+
+    nav a {
+  
+      color: var(--marian);
+      font-weight: bold;
+      font-size: 200%;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: var(--marian);
+    }
+
+    .contenedor {
+      width: 90%;
+      margin: 5% auto;
+      padding: 3%;
+      text-align: center;
+    }
+
+    .contenedor img {
+      width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: var(--marian);
+      margin: 30px 0 10px 0;
+      font-size: 2em;
+      border-bottom: 2px solid var(--maria);
+      padding-bottom: 5px;
+      text-align: center;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .conceptos p {
+      text-align: justify;
+      line-height: 1.6;
+      margin: 10px 0;
+    }
+
+    .conceptos ul {
+      text-align: left;
+      margin-left: 20px;
+      line-height: 1.5;
+    }
+
+    .mascara-contenedor {
+      width: 400px;
+      height: 400px;
+      margin: 30px auto;
+      position: relative;
+    }
+
+    .mascara {
+      width: 100%;
+      height: 100%;
+      background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjvgGjSuccLVxxdi9K0R9Ky7tmAJ-_9aasSeNFHzV7h4d3L3X-EK96tGuh-Qjwv02lzrDZkEJjz_ATWoHIv12TFeK7aQzut-f_xkDPqUlY0XIg084wDQi_Os9nB2evhFELBHlQ83ZfENIY/s1600/SMOKE.JPG');
+      background-size: cover;
+      background-position: center;
+
+      mask-image: url('https://static.thenounproject.com/png/139454-200.png');
+      mask-repeat: no-repeat;
+      mask-size: cover;
+      mask-position: center;
+
+
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Bitácora</a>
+  </nav>
+
+  <div class="contenedor">
+    <img src="/bitacora/respaldo/img/minecraft.jpeg" alt="Ejemplo de HTML y CSS">
+    
+    <h2>Conceptos nuevos</h2>
+    <div class="conceptos">
+      <p><strong>Viewport:</strong> Área visible del sitio web dentro de la ventana del navegador.</p>
+      <p><strong>La IA como ayuda para crear código:</strong> Herramientas como GitHub Copilot o ChatGPT pueden ayudar a generar código, dar sugerencias y acelerar el desarrollo.</p>
+      <p><strong>Unidades estáticas (medida fija y constante, no cambian):</strong></p>
+      <ul>
+        <li>px (pixeles)</li>
+        <li>cm (centímetros)</li>
+        <li>in (pulgadas)</li>
+        <li>mm (milímetros)</li>
+        <li>pt (puntos)</li>
+        <li>pc (picas)</li>
+      </ul>
+      <p><strong>Unidades relativas (dependen de otro valor):</strong></p>
+      <ul>
+        <li>em (tamaño de fuente relativo al elemento padre)</li>
+        <li>rem (tamaño de fuente relativo al elemento raíz)</li>
+        <li>% (porcentaje, se ajusta al tamaño del contenedor)</li>
+        <li>vw (unidad relativa al ancho de la ventana)</li>
+        <li>vh (unidad relativa a la altura de la ventana)</li>
+        <li>ch (relativa al ancho del carácter "0")</li>
+        <li>lh (relativa a la altura de línea del elemento)</li>
+      </ul>
+    </div>
+
+    <h2>Máscaras</h2>
+    <div class="mascara-contenedor">
+      <div class="mascara"></div>
+    </div>
+
+  </div>
+
+</body>
+</html>
