@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IA - GitHub Copilot</title>
+  <style>
+
+    @property --marian {
+      syntax: "<color>";
+      inherits: true;
+      initial-value: #70c5e9; 
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.1em;
+      color: #eee;
+      background-image: url("https://i.ytimg.com/vi/3GB1yXGrSsA/maxresdefault.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      text-align: center;
+      position: relative;
+    }
+
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      z-index: -1;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      text-align: center;
+      border-bottom: 2px solid var(--marian);
+      padding: 1.5% 0;
+      background: rgba(0,0,0,0.3);
+    }
+
+    nav a {
+      color: var(--marian);
+      font-weight: 700;
+      font-size: 1.8em;
+      text-decoration: none;
+      margin: 0 20px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #fff;
+      text-shadow: 0 0 8px var(--marian);
+      transform: scale(1.1);
+    }
+
+
+    .contenedor {
+      width: 90%;
+      margin: 5% auto;
+      padding: 3%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+     color: var(--marian);
+  margin: 70px 40px 10px; 
+  font-size: clamp(2rem, 5vw, 3em);
+    }
+
+    h2 {
+      color: var(--marian);
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.2em);
+      margin: 30px 0 15px;
+      border-bottom: 2px solid var(--marian);
+      padding-bottom: 5px;
+    }
+
+    .conceptos {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: left;
+      line-height: 1.6;
+    }
+
+    .conceptos p {
+      margin: 10px 0;
+    }
+
+    .conceptos ul {
+      margin: 10px 0 20px 0;
+      padding-left: 20px;
+      list-style: '✓ ';
+    }
+
+    .seccion {
+      background: rgba(0,0,0,0.5);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      margin: 30px auto;
+      padding: clamp(20px, 5%, 50px);
+      width: 100%;
+      max-width: 800px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.3s ease;
+    }
+
+    .seccion:hover {
+      transform: translateY(-5px);
+    }
+
+    .seccion img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      margin: 20px 0;
+      transition: transform 0.3s ease;
+    }
+
+    .seccion img:hover {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 900px) {
+      .seccion img {
+        width: 90%;
+        height: auto;
+      }
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+        font-size: 1.4em;
+      }
+
+      .seccion, .contenedor, .conceptos {
+        width: 98%;
+        padding: 2%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Bitácora</a>
+    <a href="hycss.html">HTML y CSS</a>
+    <a href="h.html">IA</a>
+    <a href="heyo.html">DOM</a>
+  </nav>
+
+  <h1>GitHub Copilot</h1>
+  <div class="contenedor">
+
+    <div class="conceptos">
+      <p><strong>¿Qué es?</strong></p>
+      <p>Es una herramienta de inteligencia artificial desarrollada por GitHub en colaboración con OpenAI. Funciona integrado en Visual Studio Code (y otros editores). Ayuda a los desarrolladores sugiriendo líneas de código o funciones completas basadas en el contexto.</p>
+
+      <p><strong>¿Qué hace?</strong></p>
+      <ul>
+        <li>Ahorra tiempo al escribir código repetitivo.</li>
+        <li>Ayuda a aprender nuevas funciones o sintaxis que no conocías.</li>
+        <li>Sirve como apoyo cuando estás atascado en un problema.</li>
+        <li>Compatible con varios lenguajes de programación (C, Python, JavaScript, etc.).</li>
+        <li>Genera código basado en comentarios o descripciones en lenguaje natural.</li>
+      </ul>
+
+      <p><strong>Ventajas:</strong></p>
+      <ul>
+        <li>Ahorra tiempo y esfuerzo.</li>
+        <li>Facilita el aprendizaje de nuevas sintaxis.</li>
+        <li>Útil para superar bloqueos al programar.</li>
+      </ul>
+
+      <p><strong>Desventajas:</strong></p>
+      <ul>
+        <li>No siempre es 100% correcto; requiere supervisión.</li>
+        <li>Puede generar soluciones poco optimizadas.</li>
+      </ul>
+    </div>
+
+    <div class="seccion">
+      <h2>Cómo usar GitHub Copilot</h2>
+      <p>Abre VS Code y busca la extensión GitHub Copilot en el Marketplace. Instálala y luego inicia sesión con tu cuenta de GitHub para activar la herramienta.</p>
+      <img src="img/imagen.png" alt="imagen de copilot">
+    </div>
+
+    <div class="seccion">
+      <h2>Activar Copilot</h2>
+      <p>Abre un archivo de código en tu lenguaje preferido y comienza a escribir. Copilot sugerirá líneas de código y funciones completas según tu contexto.</p>
+      <img src="img/descarga.png" alt="imagen de copilot2">
+    </div>
+
+    <div class="seccion">
+      <h2>Revisar y aceptar sugerencias</h2>
+      <p>Cuando Copilot sugiera código:</p>
+      <ul>
+        <li>Presiona "Tab" para aceptar la sugerencia.</li>
+        <li>Usa "Ctrl + ]" o "Ctrl + [" para ver otras opciones.</li>
+        <li>Si no quieres usar la sugerencia, simplemente sigue escribiendo.</li>
+      </ul>
+      <img src="img/descarga.png" alt="imagen de copilot2">
+    </div>
+
+    <div class="seccion">
+      <h2>Usar el chat</h2>
+      <p>Copilot Chat permite:</p>
+      <ul>
+        <li>Abrir el panel de chat desde la barra lateral.</li>
+        <li>Escribir preguntas o describir lo que necesitas.</li>
+        <li>Recibir explicaciones o fragmentos de código en respuesta.</li>
+      </ul>
+      <img src="img/chat.png" alt="imagen de copilot3">
+    </div>
+
+  </div>
+
+</body>
+</html>
