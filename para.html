@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="img/CELLOGO-01.ico" rel="icon">
+ 
+  <title>Fnaf</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: black;
+    }
+
+     nav {
+      position: sticky;
+      top: 0;
+      padding: 2%;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+      width: 100%;
+      background: transparent;
+      margin: 0;
+      z-index: 9;
+    }
+ 
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 28px;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: #8B0000; 
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+      gap: 60px;
+      justify-content: center;
+      align-items: center;
+    }
+ 
+    nav ul li{
+      display: inline;
+      margin: 10px;
+    }
+ 
+ 
+ 
+    .escena img {
+      position: absolute;
+      width: 100%;  
+      height: auto;
+      left: 0;
+      top: 0;
+    }
+ 
+    .luz {
+      z-index: 3;
+    }
+   
+    .luza  {
+z-index: 5;
+    }
+   
+   
+ 
+    .fondo {
+      z-index: 1;
+    }
+ 
+    .nino {
+      z-index: 2;
+     
+    }
+ 
+    .closet {
+      z-index: 4;
+     
+    }
+
+    
+   @media (max-width: 600px) {
+  nav {
+    padding: 5px;
+    
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 5px;
+    font-size: 10px; 
+  }
+}
+
+    
+  </style>
+</head>
+<body>
+
+
+
+     <nav>
+      <a href="index.html">BITACORA</a>
+    <a href="hycss.html">HTML y CSS</a>
+    <a href="h.html">IA</a>
+    <a href="heyo.html">DOM</a>
+    <a href="uacj.html">UACJ</a>
+     <a href="proycto.html">PARCIAL 2</a>
+  </nav>
+
+
+
+  <div class="escena">
+    <img src="img/fondo.png" alt="Fondo" class="fondo">
+    <img src="img/luz.png" alt="Cama" class="luz">
+    <img src="img/luiza.png" alt="Cama" class="luza">
+    <img src="img/nino.png" alt="Niño" class="nino">
+    <img src="img/closset.png" alt="Closet" class="closet">
+  </div>
+
+
+
+    <script>
+let nuevaPartida = true;
+let vidaJugador = 3;
+let nivel = 1;
+const nivelesTotales = 3;
+
+console.log("=== Cuphead :D ===");
+
+let opcion = "Jugar";
+
+switch (opcion) {
+    case "Jugar":
+        if (nuevaPartida) {
+            console.log("Iniciando nueva partida ");
+        } else {
+            console.log("Continuando partida");
+        }
+        break;
+    default:
+        console.log("Saliendo del juego");
+}
+
+console.log("\n--Niveles--");
+
+
+do {
+    console.log("\nElige un nivel " + nivel);
+
+    for (let ataque = 1; ataque <= 2; ataque++) {
+        console.log("Kingdice lanza sus cartas! (Ataque " + ataque + ")");
+        if (ataque === 1) {
+            console.log("Esquivaste el ataque!");
+        } else {
+            console.log("Te dio! -1 vida");
+            vidaJugador--;
+        }
+    }
+
+    if (vidaJugador > 0) {
+        console.log("Nivel " + nivel + " completado! Vida restante: " + vidaJugador);
+        nivel++;
+    } else {
+        console.log("Moriste. Fin del juego.");
+        break;
+    }
+
+} while (nivel <= nivelesTotales); 
+
+console.log("\n--Fin del juego, que noob--");
+</script>
+
+</body>
+</html>
+ 

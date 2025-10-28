@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Y CSS</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+  <link href="img/CELLOGO-01.ico" rel="icon">
+ 
+  <style>
+    @property --marian {
+        syntax: "<color>";
+        inherits: true;
+        initial-value: #091b1f;
+    }
+
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-image: url(img/unnamed.jpg);
+      color: #eee;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      font-size: 1.2em; 
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 999;              
+      text-align: center;        
+      border-bottom: 2px solid var(--marian);
+      padding: 1.5% 0;
+      background: rgba(0,0,0,0.3);  
+    }
+
+    nav a {
+      color: var(--marian);
+      font-weight: bold;
+      font-size: 1.8em;
+      text-decoration: none;
+      margin: 0 20px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #fff;
+      text-shadow: 0 0 8px var(--marian);
+      transform: scale(1.1);
+    }
+
+    .contenedor {
+      width: 90%;
+      margin: 5% auto;
+      padding: 3%;
+      text-align: center;
+    }
+
+    .contenedor img {
+      width: 100%; 
+      max-width: 600px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: var(--marian);
+      margin: 60px 0 10px 0; 
+      font-size: 2.4em; 
+      border-bottom: 2px solid var(--marian);
+      padding-bottom: 5px;
+      text-align: center;
+    }
+
+    .conceptos p {
+      text-align: justify;
+      line-height: 1.8;
+      margin: 12px 0;
+      font-size: 1.2em; 
+    }
+
+    .conceptos ul {
+      text-align: left;
+      margin-left: 25px;
+      line-height: 1.7;
+      font-size: 1.15em; 
+    }
+
+    .mascara-contenedor {
+      width: 400px;
+      height: 400px;
+      margin: 30px auto;
+      position: relative;
+    }
+
+    .mascara {
+      width: 100%;
+      height: 100%;
+      background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjvgGjSuccLVxxdi9K0R9Ky7tmAJ-_9aasSeNFHzV7h4d3L3X-EK96tGuh-Qjwv02lzrDZkEJjz_ATWoHIv12TFeK7aQzut-f_xkDPqUlY0XIg084wDQi_Os9nB2evhFELBHlQ83ZfENIY/s1600/SMOKE.JPG');
+      background-size: cover;
+      background-position: center;
+
+      mask-image: url('https://static.thenounproject.com/png/139454-200.png');
+      mask-repeat: no-repeat;
+      mask-size: cover;
+      mask-position: center;
+    }
+
+    /* Tablet y ipad */
+    @media (max-width: 900px) {
+      .contenedor {
+        width: 98%;
+        padding: 2%;
+      }
+      .contenedor img {
+        max-width: 100%;
+        height: 220px;      
+      }
+      .mascara-contenedor {
+        width: 98vw;
+        height: 220px;
+      }
+    }
+
+    /* Celular */
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+        font-size: 1.4em;
+      }
+      body {
+        font-size: 1em;
+      }
+      h2 {
+        font-size: 1.3em;
+        margin: 40px 0 10px 0;
+      }
+      .conceptos p,
+      .conceptos ul {
+        font-size: 1em;
+      }
+      .contenedor img {
+        width: 100%;
+        max-width: 900px;      
+        height: 380px;         
+        object-fit: cover;     
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        margin-bottom: 20px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <nav>
+      <a href="index.html">BITACORA</a>
+    <a href="hycss.html">HTML y CSS</a>
+    <a href="h.html">IA</a>
+    <a href="heyo.html">DOM</a>
+    <a href="uacj.html">UACJ</a>
+     <a href="proycto.html">PARCIAL 2</a>
+  </nav>
+  
+  <h2>Conceptos del semestre pasado</h2>
+ 
+  <div class="contenedor">
+    <img src="img/minecraft.jpeg" alt="Ejemplo de HTML y CSS">
+   
+    <h2>Conceptos nuevos</h2>
+    <div class="conceptos">
+
+      <p><strong>Viewport:</strong> Área visible del sitio web dentro de la ventana del navegador.</p>
+
+      <p><strong>La IA como ayuda para crear código:</strong> Herramientas como GitHub Copilot o ChatGPT pueden ayudar a generar código, dar sugerencias y acelerar el desarrollo.</p>
+
+      <p><strong>Unidades estáticas (medida fija y constante):</strong></p>
+      <ul>
+        <li>px (pixeles)</li>
+        <li>cm (centímetros)</li>
+        <li>in (pulgadas)</li>
+        <li>mm (milímetros)</li>
+        <li>pt (puntos)</li>
+        <li>pc (picas)</li>
+      </ul>
+
+      <p><strong>Unidades relativas (dependen de otro valor):</strong></p>
+      <ul>
+        <li>em (tamaño de fuente relativo al elemento padre)</li>
+        <li>rem (tamaño de fuente relativo al elemento raíz)</li>
+        <li>% (porcentaje, se ajusta al tamaño del contenedor)</li>
+        <li>vw (unidad relativa al ancho de la ventana)</li>
+        <li>vh (unidad relativa a la altura de la ventana)</li>
+        <li>ch (relativa al ancho del carácter "0")</li>
+        <li>lh (relativa a la altura de línea del elemento)</li>
+      </ul>
+
+      <p><strong>@media:</strong></p>
+      <p>Es una característica del diseño web que permite aplicar estilos CSS según las propiedades del dispositivo o navegador, como ancho, alto u orientación de la pantalla. Con ello se crean sitios responsivos que se adaptan a computadoras, tabletas y móviles.</p>
+
+      <p><strong>@property:</strong></p>
+      <p>En CSS permite crear variables personalizadas con más control: puedes definir su tipo, un valor inicial y si se heredan o no. A diferencia de las variables normales, estas pueden animarse y usarse en transiciones.</p>
+
+      <p><strong>Etiqueta Picture:</strong></p>
+      <p>Sirve para mostrar diferentes imágenes según el ancho de la pantalla.
+        <ul>
+            <li>-Usa <source> con condiciones (min-width).</li>
+        </ul>
+      </p>
+
+      <p><strong>Cosas que aprendi extra:</strong></p>
+      <ul>
+        <li>Display: Define cómo se comporta un elemento en la página, cómo se muestra y cómo interactúa con otros elementos. </li>
+        <li>Object-Fit: Controla cómo se ajusta una imagen o video dentro de su contenedor. </li>
+        <li>Background-attachment: Define si el fondo de un elemento se mueve o se queda fijo cuando haces scroll. </li>
+        <li>Flex-direction: Se usa dentro de un contenedor display: flex y define la dirección en la que se alinean los hijos. </li>
+        <li>Gap: Define el espacio entre elementos en contenedores flex o grid. </li>
+      </ul>
+
+      <p><strong>Reset</strong></p>
+      <p>Es un conjunto de reglas CSS que eliminan los estilos predeterminados del navegador para asegurar una apariencia consistente en todos los navegadores.
+      </p>
+
+
+
+       <p><strong>JAVA</strong></p>
+      <p>Una función es un bloque de código el cual realiza una tarea específica. Un ejemplo de una funcion:</p>
+      <p>function saludar() {
+    console.log("¡Hola, Mundo!");
+}
+</p>
+<p>Las funciones que retonan un valor son las que te regresan un valor, por ejemplo usando la palaba return:</p>
+<p>function resta(a, b) {
+    return a - b;
+}
+</p>
+
+
+<p>Llamar una funcion te permite llamar la funcion creada por su nombre seguido d parentesis:</p>
+<p>resta(7, 3);
+</p>
+
+
+<p>Imprimir la funcion, como su nombre lo dice, muestra en la pantalla el valor retornado por una función en la consola</p>
+<p>console.log(resta(7, 3));</p>
+
+
+    <script>
+         function meow(n) {
+        for (let i = 0; i < n; i++) {
+          console.log("meow " + i);
+        }
+      }
+
+      meow(3);
+    </script>
+
+
+    <p>getElementById</p>
+    <p>Es un método de JavaScript que se utiliza para obtener un elemento del DOM por su ID. El DOM (Document Object Model) es una representación estructurada de todo el contenido de una página web.</p>
+
+
+    <p>Addeventlistener</p>
+    <p>Es un método de JavaScript que se utiliza para registrar un oyente de eventos en un elemento del DOM, permitiendo que se ejecute una función cuando ocurre un evento específico, como un clic o una pulsación de tecla</p>
+
+
+    <h1 id="titulo">Holaaa</h1>
+    <button id="cambiarTexto">Cambiar texto</button>
+
+
+    <script>
+        document.getElementById("cambiarTexto").addEventListener("click", function() {
+            document.getElementById("titulo").innerText = "Adios";
+        });
+    </script>
+
+    </div>
+ 
+    <h2>Máscaras</h2>
+    <div class="mascara-contenedor">
+      <p>Las máscaras contienen algo dentro de un espacio definido, como una imagen</p>
+      <div class="mascara"></div>
+    </div>
+  </div>
+ 
+</body>
+</html>

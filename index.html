@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bitácora</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+  <link href="img/CELLOGO-01.ico" rel="icon">
+ 
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-color: #27151c;
+      color: #eee;
+      background-image: url(img/simon.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+    }
+ 
+    header {
+     
+      padding: 10%;
+      color: white;
+    }
+ 
+    .headert h1 {
+      font-size: 70px;
+    }
+ 
+    .headert p {
+      font-size: 40px;
+      margin: 5px 0 0;
+    }
+ 
+    nav {
+      position: sticky;
+      top: 0;
+      padding: 2%;
+      display: flex;
+      
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+      width: 100%;
+      background: transparent;
+      margin: 0;
+    }
+ 
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 28px;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: #8B0000; 
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+     
+      justify-content: center;
+      align-items: center;
+    }
+ 
+    nav ul li{
+      display: inline;
+      margin: 10px;
+    }
+ 
+    .contenedor {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 2%;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      align-items: center;
+    }
+ 
+    .caj {
+      background-color: rgba(0,0,0,0.5);
+      border-radius: 16px;
+      padding: 5%;
+      box-shadow: 0 4px 12px rgba(67, 0, 0, 0.6);
+      transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+      width: 100%;
+      max-width: 700px;      
+      min-width: 280px;
+      text-align: center;
+      margin-bottom: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+ 
+    .caj h2 {
+      font-size: 24px;
+      margin-bottom: 15px;
+      color: #ffffff;
+    }
+ 
+    .caj p {
+      text-align: justify;
+      line-height: 25px;
+      color: #eee;
+    }
+ 
+    .caj img {
+      width: 100%;
+      height: 400px;         
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+ 
+    .contenedor a {
+      text-decoration: none;
+    }
+
+    /* Tablets o ipaD */
+    @media (max-width: 900px) {
+      .contenedor {
+        max-width: 98vw;
+        padding: 1%;
+      }
+      .caj {
+        max-width: 98vw;
+        padding: 3%;
+        background-color: rgba(0, 128, 128, 0.7);
+        box-shadow: 0 2px 6px rgba(67, 0, 0, 0.6);
+        transform: scale(0.98);
+      }
+      .caj img {
+        height: 250px;
+      }
+    }
+
+    /* Celular*/
+    @media (max-width: 600px) {
+      .headert h1 {
+        font-size: 2.2em;
+      }
+      .headert p {
+        font-size: 1.2em;
+      }
+      .caj {
+        padding: 2%;
+        background-color: rgba(67, 0, 0, 0.6);
+        transform: scale(0.95);
+      }
+      .caj img {
+        height: 160px;
+      }
+      nav {
+        flex-direction: column;
+       
+        font-size: 1em;
+        padding: 4% 0;
+      }
+      nav ul li {
+        display: block;
+        margin: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="headert">
+      <h1>BITACORA</h1>
+      <p>MARIAN GOMEZ</p>
+      <p>HTML5 y CSS3</p>
+      <p>Grupo A</p>
+    </div>
+  </header>
+ 
+  <nav>
+    <ul>
+      <li><a href="#html">HTML y CSS</a></li>
+      <li><a href="#html2">DOM</a></li>
+      <li><a href="#html3">IA</a></li>
+      <li><a href="#html4">PARALAX</a></li>
+      <li><a href="#html5">UACJ</a></li>
+       <li><a href="#html6">PARCIAL 2</a></li>
+    </ul>
+  </nav>
+ 
+  <div class="contenedor">
+    <a href="hycss.html">
+      <div class="caj" id="html">
+        <img src="https://static.wixstatic.com/media/cae29b_583a314283924629ab7ede58d33ba4e2~mv2.jpg">
+        <h2>HTML y CSS</h2>
+        <p>Conceptos</p>
+      </div>
+    </a>
+ 
+    <a href="heyo.html">
+      <div class="caj" id="html2">
+        <img src="https://cdn-wcsm.alura.com.br/2025/04/arvore-dom.png">
+        <h2>DOM</h2>
+        <p>Conceptos de dom</p>
+      </div>
+    </a>
+
+    <a href="h.html">
+      <div class="caj" id="html3">
+        <img src="img/imagen.png">
+        <h2>DOM</h2>
+        <p>IA como herramienta</p>
+      </div>
+    </a>
+
+    <a href="para.html">
+      <div class="caj" id="html4">
+        <img src="https://i.redd.it/did-anyone-notice-how-the-rooms-in-fnaf-4-are-different-v0-vqqfa6biwqmb1.jpg?width=1290&format=pjpg&auto=webp&s=cc2307f2c295ed9282a5e3535804b000eec59c1e">
+        <h2>PARALAX</h2>
+        <p>Ilustracion y efecto paralax</p>
+      </div>
+    </a>
+
+     <a href="uacj.html">
+      <div class="caj" id="html5">
+        <img src="img/60201f70-779b-45b8-af60-bac33380478f.jfif">
+        <h2>UACJ</h2>
+        <p>Propuesta de la pagina de la uacj</p>
+      </div>
+    </a>
+
+     <a href="proycto.html">
+      <div class="caj" id="html6">
+        <img src="img/hey.JPG">
+        <h2>PARCIAL 2</h2>
+        <p>Proyecto</p>
+      </div>
+    </a>
+
+  </div>
+</body>
+</html>
