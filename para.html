@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="img/CELLOGO-01.ico" rel="icon">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <title>Fnaf</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: black;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      padding: 2%;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+      width: 100%;
+      background: transparent;
+      margin: 0;
+      z-index: 9;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 28px;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: #8B0000; 
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+      gap: 60px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    nav ul li {
+      display: inline;
+      margin: 10px;
+    }
+
+    /* Escena general */
+    .escena {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .escena img {
+      position: absolute;
+      width: 100%;
+      height: auto;
+      left: 0;
+      top: 0;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      transform: translate3d(0, 0, 0);
+      transition: transform 0.1s linear;
+    }
+
+   
+    .fondo  { z-index: 1; }
+    .nino   { z-index: 2; }
+    .luz    { z-index: 3; }
+    .closet { z-index: 4; }
+    .luza   { z-index: 5; }
+
+    .contenido {
+    
+      padding: 80px 20px;
+      background-color: #000000;
+      text-align: center;
+      color: white;
+      min-height: 500px;
+     
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        padding: 5px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 5px;
+        font-size: 10px; 
+      }
+    }
+
+    @media (max-width: 600px) {
+  .escena {
+    height: 60%;
+  }
+}
+  </style>
+</head>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybBogGz3QpLrHFe2k+WfGQ0xQJt6YkA3e5HnYJ6fK0v7Kj0Z" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-C6bzzc9yF+Hc7QJQetdbfKk9Z1djPfCe7soP1M76nTwHg+W9F1cZ6iY9GJ6vE6nU" crossorigin="anonymous"></script>
+<body>
+
+  <nav>
+    <a href="index.html">BITACORA</a>
+    <a href="hycss.html">HTML y CSS</a>
+    <a href="h.html">IA</a>
+    <a href="heyo.html">DOM</a>
+    <a href="uacj.html">UACJ</a>
+    <a href="proycto.html">PARCIAL 2</a>
+  </nav>
+
+  <div class="escena" id="escena">
+    <img src="img/fondo.png" alt="Fondo" class="fondo" id="fondo">
+    <img src="img/luz.png" alt="Luz" class="luz" id="luz">
+    <img src="img/luiza.png" alt="Luz adicional" class="luza" id="luza">
+    <img src="img/nino.png" alt="Niño" class="nino" id="nino">
+    <img src="img/closset.png" alt="Closet" class="closet" id="closet">
+  </div>
+
+  <section class="contenido">
+    <h2>FNAF 4 </h2>
+    <p>La ilustracion esta inspirada en el videojuego de Five nights at freddys, mas especificamente, en la entrega numero 4. Fue realizada de manera digital en la aplicacion procreate. El dibujo tomo un aproximado de 3 horas, y tiene mas de 6000 pinceladas.  </p>
+    <div style="height: 500px;"></div>
+    <p>Proceso de la ilustracion </p>
+  </section>
+
+
+  <div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="img/BOCETO.jpeg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="img/BOCET2.jpeg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="img/LINEARRT.jpeg" class="d-block w-100" alt="...">
+    </div>
+      <div class="carousel-item">
+      <img src="img/FINAL.jpeg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+  <script>
+document.addEventListener('DOMContentLoaded', function () {
+    const fondo  = document.getElementById('fondo');
+    const nino   = document.getElementById('nino');
+    const luz    = document.getElementById('luz');
+    const luza   = document.getElementById('luza');
+    const closet = document.getElementById('closet');
+    const escena = document.getElementById('escena');
+
+  
+    const speedFondo  = 0.4;
+    const speedLuz    = 0.15;
+    const speedLuza   = 0.2;
+    const speedNino   = 0.37;
+    const speedCloset = 0.1;
+
+    function updateParallax() {
+        const scrollOffset = escena.getBoundingClientRect().top;
+
+        fondo.style.transform  = `translate3d(0, ${scrollOffset * speedFondo}px, 0)`;
+        luz.style.transform    = `translate3d(0, ${scrollOffset * speedLuz}px, 0)`;
+        luza.style.transform   = `translate3d(0, ${scrollOffset * speedLuza}px, 0)`;
+        nino.style.transform   = `translate3d(0, ${scrollOffset * speedNino}px, 0)`;
+        closet.style.transform = `translate3d(0, ${scrollOffset * speedCloset}px, 0)`;
+    }
+
+    window.addEventListener('scroll', updateParallax);
+    updateParallax();
+});
+
+</script>
+</body>
+</html>
+
+
+    <script>
+let nuevaPartida = true;
+let vidaJugador = 3;
+let nivel = 1;
+const nivelesTotales = 3;
+
+console.log("=== Cuphead :D ===");
+
+let opcion = "Jugar";
+
+switch (opcion) {
+    case "Jugar":
+        if (nuevaPartida) {
+            console.log("Iniciando nueva partida ");
+        } else {
+            console.log("Continuando partida");
+        }
+        break;
+    default:
+        console.log("Saliendo del juego");
+}
+
+console.log("\n--Niveles--");
+
+
+do {
+    console.log("\nElige un nivel " + nivel);
+
+    for (let ataque = 1; ataque <= 2; ataque++) {
+        console.log("Kingdice lanza sus cartas! (Ataque " + ataque + ")");
+        if (ataque === 1) {
+            console.log("Esquivaste el ataque!");
+        } else {
+            console.log("Te dio! -1 vida");
+            vidaJugador--;
+        }
+    }
+
+    if (vidaJugador > 0) {
+        console.log("Nivel " + nivel + " completado! Vida restante: " + vidaJugador);
+        nivel++;
+    } else {
+        console.log("Moriste. Fin del juego.");
+        break;
+    }
+
+} while (nivel <= nivelesTotales); 
+
+console.log("\n--Fin del juego, que noob--");
+</script>
+
+</body>
+</html>
+ 
