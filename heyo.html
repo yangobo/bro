@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+  <link href="img/CELLOGO-01.ico" rel="icon">
+ 
+  <style>
+    @property --marian {
+        syntax: "<color>";
+        inherits: true;
+        initial-value: #5e0000; 
+    }
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-image: url(img/sonri.png);
+      color: #eee;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+    }
+
+      nav {
+      position: sticky;
+      top: 0;
+      z-index: 999;              
+      text-align: center;        
+      padding: 1% 0;
+      background: rgba(37, 9, 9, 0.9);  
+      font-size: 1em;
+    }
+
+    nav a {
+      color: #ffffff; 
+     font-weight: bold;
+      font-size: 1.3em;
+      text-decoration: none;
+      margin: 0 40px; 
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #711313; 
+      text-shadow: 0 0 8px #2f0505;
+      transform: scale(1.1);
+    }
+
+    .contenedor {
+      width: 60%;
+      margin: 5% auto;
+      padding: 2%;
+      text-align: center;
+    }
+
+    .contenedor img {
+      width: 100%;
+     
+      box-shadow: 0 3% 6% rgba(0,0,0,0.4);
+    }
+
+   
+    .segunda, .tercera, .cuarta {
+      display: none;
+    }
+
+    @media (max-width: 900px) {
+      .segunda, .tercera, .cuarta {
+        display: block;
+        margin-top: 20px;
+      }
+
+      .contenedor {
+        width: 90%;
+      }
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+        font-size: 1.4em;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+
+
+  <nav>
+  <a href="index.html">BITACORA</a>
+    <a href="hycss.html">HTML y CSS</a>
+    <a href="h.html">IA</a>
+    <a href="heyo.html">DOM</a>
+    <a href="uacj.html">UACJ</a>
+     <a href="proycto.html">PARCIAL 2</a>
+  </nav>
+
+  <h1 style="text-align:center;">Haz la pantalla más pequeña 
+    </h1>
+
+    <!--Para ver las imagenes haz la pantalla mas pequeña :D-->
+
+  
+  <div class="contenedor">
+    <img src="img/DOM.jpeg" alt="imagen de DOM">
+  </div>
+
+  
+  <div class="contenedor segunda">
+    <img src="img/DOMA.jpeg" alt="imagen DOMA">
+  </div>
+
+  <div class="contenedor tercera">
+    <img src="img/domcc.jpeg" alt="imagen domcc">
+  </div>
+
+  <div class="contenedor cuarta">
+    <img src="img/DOME.jpeg" alt="imagen DOME">
+  </div>
+
+</body>
+</html>
