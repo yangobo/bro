@@ -1,0 +1,575 @@
+
+@font-face {
+    font-family: "MiFuente";
+    src: url("fuentes/Green\ Matcha.otf") format("opentype");
+}
+/* ========================================
+   1. ESTILOS GENERALES
+======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: #fbfcf7;
+    color: #294b32;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* ========================================
+   2. ENCABEZADO
+======================================== */
+
+header {
+    width: 100%;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e3efd9;
+      position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 200px;
+    height: auto;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    font-size: 18px;
+    font-weight: bold;
+    color: #315d39;
+}
+
+nav a:hover {
+    color: #83a96c;
+}
+
+.boton-compra {
+    background-color: #315d39;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.boton-compra:hover {
+    background-color: #527d4b;
+}
+
+
+/* ========================================
+   3. BOTONES GENERALES
+======================================== */
+
+.boton {
+    display: inline-block;
+    background-color: #47764b;
+    color: white;
+    padding: 15px 28px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.boton:hover {
+    background-color: #315d39;
+}
+
+
+/* ========================================
+   4. PÁGINA DE INICIO
+======================================== */
+
+.inicio {
+    min-height: 580px;
+    padding: 70px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+    background-color: #000000;
+    position: relative;
+overflow: hidden;
+isolation: isolate;
+}
+
+
+.inicio::before {
+    content: "";
+    position: absolute;
+    inset: -15px;
+    background-image: url("recursos/Colecciondecargadoresanimalesadorables.png");
+    background-size: cover;
+    background-position: center;
+    filter: blur(7px);
+    opacity: 0.35;
+    z-index: -1;
+}
+
+.texto-inicio h1 {
+    font-family: "MiFuente", sans-serif;
+    font-size: 80px;
+    line-height: 1;
+    color: #ffffff;
+    margin: 0 0 25px;
+}
+
+.texto-inicio p {
+    max-width: 450px;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.imagen-inicio {
+    display: flex;
+    justify-content: center;
+}
+
+.imagen-inicio img {
+    width: 100%;
+    max-width: 500px;
+    height: 450px;
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+
+
+
+
+
+/* ========================================
+   5. SECCIÓN CANIJILLOS
+======================================== */
+
+.canijillos {
+    padding: 90px 8%;
+    text-align: center;
+}
+
+.canijillos h2 {
+    font-family: "MiFuente", sans-serif;
+    font-size: 45px;
+    color: #315d39;
+    margin-bottom: 15px;
+}
+
+.canijillos > p {
+    color: #778b77;
+    font-size: 15px;
+    margin-bottom: 40px;
+}
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.producto {
+    text-align: left;
+}
+
+.producto img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    background-color: #e3efd9;
+}
+
+.producto h3 {
+    font-family: "Cooper Black", "Arial Rounded MT Bold", sans-serif;
+    font-size: 20px;
+    color: #315d39;
+    margin-top: 18px;
+}
+
+
+/* ========================================
+   6. SOBRE CUBICHARGE
+======================================== */
+
+.sobre-producto {
+    padding: 90px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+    background-color: #eaf2e3;
+}
+
+.imagen-producto img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.texto-producto h2 {
+    font-family: "MiFuente", sans-serif;
+    font-size: 48px;
+    color: #315d39;
+    margin-top: 0;
+}
+
+.texto-producto p {
+    font-size: 15px;
+    line-height: 1.9;
+    color: #627665;
+}
+
+
+/* ========================================
+   7. PERSONALIZACIÓN
+======================================== */
+
+.personalizar {
+    padding: 70px 8%;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.modelo {
+    height: 450px;
+    background: #eaf2e3;
+}
+
+.modelo model-viewer {
+    width: 100%;
+    height: 100%;
+}
+
+.paleta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+}
+
+.paleta h3 {
+    width: 100%;
+    color: #315d39;
+}
+
+.paleta button {
+    width: 38px;
+    height: 38px;
+    border: 2px solid #d5e3ce;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.personalizar .boton {
+    grid-column: 1 / -1;
+    justify-self: center;
+}
+
+.titulo-personalizar {
+    grid-column: 1 / -1;
+    font-family: "MiFuente", sans-serif;
+    font-size: 45px;
+    color: #315d39;
+    text-align: center;
+    margin: 0 0 20px;
+}
+
+.texto-personalizar h2 {
+    font-family: "Cooper Black", "Arial Rounded MT Bold", sans-serif;
+    font-size: 48px;
+    line-height: 1.1;
+    color: #315d39;
+    margin: 0 0 25px;
+}
+
+.texto-personalizar p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #627665;
+    margin-bottom: 30px;
+}
+
+/* Vista del producto */
+
+.vista-personalizar {
+    background-color: #edf3e8;
+    padding: 18px;
+    border: 1px solid #d5e3ce;
+}
+
+.encabezado-vista {
+    display: flex;
+    justify-content: space-between;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #52764e;
+    margin-bottom: 15px;
+}
+
+.imagen-personalizador {
+    width: 100%;
+    height: 350px;
+    background-color: #1d3510;
+}
+
+.imagen-personalizador img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.modelo model-viewer {
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+}
+
+
+
+/* PIE DE PÁGINA */
+
+footer {
+    background-color: #315d39;
+    color: #e3efd9;
+    padding: 50px 8% 20px;
+}
+
+.footer-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    padding-bottom: 40px;
+}
+
+.footer-marca h2 {
+    font-family: "MiFuente", sans-serif;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.footer-contacto h3,
+.footer-redes h3 {
+    margin-bottom: 15px;
+}
+
+.footer-contacto a {
+    color: #e3efd9;
+    text-decoration: none;
+}
+
+.iconos-redes {
+    display: flex;
+    gap: 15px;
+}
+
+.iconos-redes a {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #47764b;
+    border-radius: 50%;
+}
+
+.iconos-redes svg {
+    width: 22px;
+    height: 22px;
+    fill: #e3efd9;
+}
+
+.footer-final {
+    border-top: 1px solid #627e63;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 13px;
+}
+
+.iconos-redes img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+/* RESPONSIVE DEL PIE DE PÁGINA */
+
+@media (max-width: 700px) {
+
+    .footer-contenido {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+}
+
+/* TABLETS */
+
+@media (max-width: 800px) {
+
+    header {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    /* INICIO */
+
+    .inicio {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .texto-inicio h1 {
+        font-size: 58px;
+    }
+
+    .texto-inicio p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* CANIJILLOS */
+
+    .productos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* SOBRE CUBICHARGE */
+
+    .sobre-producto {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    /* PERSONALIZACIÓN */
+
+    .personalizar {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+}
+
+/* CELULARES */
+
+@media (max-width: 500px) {
+
+    header {
+        padding: 20px 5%;
+    }
+
+    .logo img {
+        width: 120px;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 15px;
+    }
+
+    .boton-compra {
+        padding: 10px 17px;
+        font-size: 15px;
+    }
+
+    /* ESPACIADO */
+
+    .inicio,
+    .canijillos,
+    .sobre-producto,
+    .personalizar {
+        padding: 55px 6%;
+    }
+
+    /* INICIO */
+
+    .texto-inicio h1 {
+        font-size: 48px;
+    }
+
+    .imagen-inicio img {
+        height: 300px;
+    }
+
+    /* CANIJILLOS */
+
+    .canijillos h2 {
+        font-size: 35px;
+    }
+
+    .productos {
+        grid-template-columns: 1fr;
+    }
+
+    .producto img {
+        height: 280px;
+    }
+
+    /* SOBRE CUBICHARGE */
+
+    .texto-producto h2,
+    .texto-personalizar h2 {
+        font-size: 35px;
+    }
+
+    .imagen-producto img {
+        height: 300px;
+    }
+
+    /* PERSONALIZACIÓN */
+
+    .modelo {
+        height: 300px;
+    }
+
+    /* PIE DE PÁGINA */
+
+    .footer-contenido {
+        gap: 25px;
+    }
+
+}
